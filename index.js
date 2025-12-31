@@ -51,12 +51,12 @@ console.log(a); //now a has a boolean datatype.
 
 //console.log(b); //b has a datatype undefined.
 
-// Number /
+// (1) Number /
 let num = 200;
 var n = 36778;
 let num2 = 3.4;
 
-// String /
+//(2) String /
 let firstName = "Ahmed";
 let secondName = "Bilal";
 
@@ -90,3 +90,123 @@ console.log(myIntro);
 // a placeholder using ${} notation
 let Intro = `Hey!  ${Name} and ${edu}`;
 console.log(Intro);
+
+// (3) Boolean
+let isAdmin = true;
+var isLogin = false;
+
+// (4) Arrays
+// Elements in an array are arranged in index location (starting from 0)
+let arr = ["bilal", 24, "CS graduate"];
+console.log(arr);
+console.log(arr[0]); //access the elements of array
+
+// multidimensional array
+
+const shoppingCard = [
+  ["book", 200],
+  ["pens", 100],
+  ["bag", 1000],
+];
+
+// accessing elements in multidimentional array
+
+let secondItem = shoppingCard[1][0]; //accessing the first element of second array
+console.log(secondItem);
+
+// (5) Objects
+
+// in object : variables are called properties or attributes
+// functions are called object method.
+// Object contains key value pairs.
+
+let myObj = {
+  name: "javascript book",
+  price: 500,
+  author: "xyz",
+  printDescription: function () {
+    console.log(`${this.author}:${this.name}|:${this.price}`);
+  },
+};
+// name, price, author are properties
+// printDescription is a method
+// this keyword address the current object. like the above this.name address the name property in myObj .
+
+// (6) undefiend
+var d;
+console.log(d); //output will be undefined bcz the variable is declared but didnot assigned a value.
+var d = "abc";
+console.log(d);
+
+// (7) null
+// null represent to empty object
+
+const dog = {
+  name: "Bello",
+};
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  pet: dog,
+};
+console.log(person.pet); // Output: Object {name: "Bello"}
+person.pet = null;
+console.log(person.pet); // Output: null
+
+// Arthematic operators in js
+
+// add
+let sum = 3 + 4;
+console.log("sum= " + sum);
+// subtract
+let sub = 50 - 9;
+console.log("subtraction= " + sub);
+// division
+let div = 30 / 5;
+console.log("division= " + div);
+// Multiplication
+let mul = 20 * 5;
+console.log("dimultiplication= " + mul);
+// modlus
+let modlus = 30 % 2;
+console.log("modulus= " + modlus);
+// increment
+let v = 3;
+v++;
+console.log(v);
+// decrement
+let u = 9;
+u--;
+console.log(u);
+// short form while using operators
+let result = 30;
+result += 10;
+console.log(result); //30+10 output:40
+result -= 20;
+console.log(result); //40-20 output:20
+result /= 5;
+console.log(result); //20/5 output:4
+result *= 4;
+console.log(result); //4*4 output:16
+result %= 3;
+console.log(result); //16%3 output:1
+
+// Logical Operators:
+// logical values are use to deal with
+//  boolean values like "True and False"
+
+// AND Operator (&&)
+// The AND operator returns true if both operands are true. Otherwise, it returns false.
+
+// OR Operator (||)
+// The OR operator returns true whenever one of the two operands is true.
+//  It only returns false if both operands are false.
+
+// NOT Operator (!) (Negation operator)
+//  if the operand is true, the NOT returns false; if the operand is false, the operator returns true.
+
+var a = true;
+var b = false;
+console.log(a && b);
+console.log(a || b);
+console.log(!a);
