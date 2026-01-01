@@ -210,3 +210,50 @@ var b = false;
 console.log(a && b);
 console.log(a || b);
 console.log(!a);
+
+
+////// Comparison Operators: //////
+
+// (==) Equal
+//compare the value only not the datatype
+console.log(5 == 5); //true
+console.log(10 == "10"); //true
+console.log(0 == false); //true
+console.log(1 == true); //true
+
+// (!=) Unequal to
+console.log(10 != 8); //true
+console.log(3 != 3); //false
+
+// (===) strictly equal to
+// compair value as well as datatype also
+console.log(10 === "10"); //false
+console.log(1 === true); //false
+
+// (!==) strictly unequal to
+console.log(4 !== 10); //true
+
+// (>) Greater than
+
+// (<) Less than
+
+// (>=) Less than or equal to
+
+// (<=) Greater than or equal to
+
+/// Optional Chaining Operator (?)  ///
+// This operator is placed directly after a
+// property when it is accessed, which ensures that the next hierarchy
+// level is only accessed if the corresponding property exists.
+
+const user = {
+  firstName: "ahmed",
+  lastName: "bilal",
+  contact: {
+    email: "abc@gmail.com",
+    phoneNo: "09383736363",
+  },
+};
+
+console.log(user.contact?.email);
+console.log(user.education?.marks); //undefined bcz the education property did not exist
