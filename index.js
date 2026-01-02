@@ -54,7 +54,7 @@ console.log(a); //now a has a boolean datatype.
 // (1) Number /
 let num = 200;
 var n = 36778;
-let num2 = 3.4;
+// let num2 = 3.4;
 
 //(2) String /
 let firstName = "Ahmed";
@@ -211,7 +211,6 @@ console.log(a && b);
 console.log(a || b);
 console.log(!a);
 
-
 ////// Comparison Operators: //////
 
 // (==) Equal
@@ -257,3 +256,71 @@ const user = {
 
 console.log(user.contact?.email);
 console.log(user.education?.marks); //undefined bcz the education property did not exist
+
+// conditional statements
+
+//if else
+let x = 10;
+if (x % 2 == 0) {
+  console.log("number is even");
+} else {
+  console.log("number is odd");
+}
+
+let userLogIn = true;
+let userIsAdmin = true;
+if (userLogIn && userIsAdmin) {
+  console.log("Welcome to Admin Dashboard");
+} else {
+  console.log("You are not allowed");
+}
+
+// const age = prompt("Please enter your age.");
+// let isAtLeast18;
+// if (age >= 18) {
+//   isAtLeast18 = true;
+// } else {
+//   isAtLeast18 = false;
+// }
+// console.log(isAtLeast18);
+
+// The above code can be written using Selection operator
+// which is a shorter way
+
+// const age = prompt("Please enter your age.");
+// const isAtLeast18 = age >= 18 ? true : flase;
+// console.log(isAtLeast18);
+
+// Calculator using Switch statement
+console.log("===CALCULATOR USING Switch statement===");
+let num1 = Number(prompt("enter a number"));
+console.log("First number= ", num1);
+let num2 = Number(prompt("enter second number"));
+console.log("Second number= ", num2);
+let operator = prompt("enter a operator");
+let res;
+switch (operator) {
+  case "+":
+    res = num1 + num2;
+    console.log("sum = ", res);
+    break;
+  case "-":
+    res = num1 - num2;
+    console.log("Subtract= ", res);
+    break;
+  case "*":
+    res = num1 * num2;
+    console.log("Multiplication= ", res);
+    break;
+  case "/":
+    res = num1 / num2;
+    console.log("Division= ", res);
+    break;
+  case "%":
+    res = num1 % num2;
+    console.log("Modulus= ", res);
+    break;
+  default:
+    console.log("Try Again with a valid operators");
+    break;
+}
