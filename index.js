@@ -156,8 +156,8 @@ console.log(person.pet); // Output: null
 // Arthematic operators in js
 
 // add
-let sum = 3 + 4;
-console.log("sum= " + sum);
+let add = 3 + 4;
+console.log("addition= " + add);
 // subtract
 let sub = 50 - 9;
 console.log("subtraction= " + sub);
@@ -292,35 +292,105 @@ if (userLogIn && userIsAdmin) {
 // console.log(isAtLeast18);
 
 // Calculator using Switch statement
-console.log("===CALCULATOR USING Switch statement===");
-let num1 = Number(prompt("enter a number"));
-console.log("First number= ", num1);
-let num2 = Number(prompt("enter second number"));
-console.log("Second number= ", num2);
-let operator = prompt("enter a operator");
-let res;
-switch (operator) {
-  case "+":
-    res = num1 + num2;
-    console.log("sum = ", res);
-    break;
-  case "-":
-    res = num1 - num2;
-    console.log("Subtract= ", res);
-    break;
-  case "*":
-    res = num1 * num2;
-    console.log("Multiplication= ", res);
-    break;
-  case "/":
-    res = num1 / num2;
-    console.log("Division= ", res);
-    break;
-  case "%":
-    res = num1 % num2;
-    console.log("Modulus= ", res);
-    break;
-  default:
-    console.log("Try Again with a valid operators");
-    break;
+// console.log("===CALCULATOR USING Switch statement===");
+// let num1 = Number(prompt("enter a number"));
+// console.log("First number= ", num1);
+// let num2 = Number(prompt("enter second number"));
+// console.log("Second number= ", num2);
+// let operator = prompt("enter a operator");
+// let res;
+// switch (operator) {
+//   case "+":
+//     res = num1 + num2;
+//     console.log("sum = ", res);
+//     break;
+//   case "-":
+//     res = num1 - num2;
+//     console.log("Subtract= ", res);
+//     break;
+//   case "*":
+//     res = num1 * num2;
+//     console.log("Multiplication= ", res);
+//     break;
+//   case "/":
+//     res = num1 / num2;
+//     console.log("Division= ", res);
+//     break;
+//   case "%":
+//     res = num1 % num2;
+//     console.log("Modulus= ", res);
+//     break;
+//   default:
+//     console.log("Try Again with a valid operators");
+//     break;
+// }
+
+// // for Loop::
+let array = [10, 20, 30, 40, 50];
+for (let i = 0; i < array.length; i++) {
+  const element = array[i];
+  console.log(element);
+}
+console.log("multiply each number with 2 , start from 10 untill zero");
+for (let v = 10; v >= 0; v--) {
+  console.log("Number== ", v * 2);
+}
+
+//// Nested for loop ::
+let nestedArr = [
+  [10, 20],
+  [30, 40],
+  [50, 60],
+];
+for (let i = 0; i < nestedArr.length; i++) {
+  const element = nestedArr[i];
+  console.log(element);
+  for (let j = 0; j < nestedArr.length; j++) {
+    const element = array[j];
+    console.log(element);
+  }
+}
+
+// while loop
+// executing the code statement while condition will not meet.
+
+// printing Table of 2
+console.log("TABLE OF 2 Using while Loop.");
+var a = 2;
+var b = 1;
+while (b !== 11) {
+  console.log(`${a} X  ${b} = ${a * b}`);
+  b++;
+}
+
+// sum of numbers until Zero(0)
+
+// var userNum;
+// var sum = 0;
+// userNum = Number(prompt("enter a number:"));
+// while (userNum !== 0) {
+//   sum += userNum;
+//   console.log(" sum", sum);
+//   userNum = Number(prompt("enter a number:"));
+// }
+
+// do-while loop
+// this loop execute the code once even if the condition didnot meet.
+let m = -1;
+do {
+  console.log(m);
+} while ((m = 0));
+
+// Break and Continue in Loops:
+
+// Break keyword stop/terminate the loop once the condition will meet at first time
+// Continue keyword will not stop on first value found, it iterate the loop on rest of the values to check the specific condition
+let myArr = [1, 2, 4, 5, 5, 78, 9, 6];
+for (let i = 0; i < myArr.length; i++) {
+  const value = myArr[i];
+  if (value % 2 == 0) {
+    console.log("Even value found:", value);
+    // break;
+    continue;
+  }
 }
